@@ -1,6 +1,6 @@
 set VERSION=3.1.1
 
-call mvn clean install -DskipTests || { exit 1; }
+call mvn clean install -DskipTests -Dcheckstyle.skip=true || { exit 1; }
 
 rm -rf build/lib build/tool || { exit 1; }
 mkdir .\build\lib || { exit 1; }
